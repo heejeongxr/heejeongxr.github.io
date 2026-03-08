@@ -1,0 +1,484 @@
+/* Google Material Design 3 Inspired Style */
+
+:root {
+  /* Color Palette */
+  --md-sys-color-primary: #1a73e8;
+  /* Google Blue */
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-surface: #ffffff;
+  --md-sys-color-on-surface: #202124;
+  /* Google Dark Grey */
+  --md-sys-color-on-surface-variant: #5f6368;
+  /* Google Light Grey */
+  --md-sys-color-outline: #dadce0;
+  --md-sys-color-background: #f8f9fa;
+  /* Very Light Grey Background */
+
+  /* Elevation / Shadows */
+  --md-sys-elevation-1: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --md-sys-elevation-2: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+
+  /* Typography */
+  --md-sys-typescale-display-large-font: 'Google Sans', 'Roboto', sans-serif;
+  --md-sys-typescale-body-font: 'Roboto', 'Arial', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--md-sys-typescale-body-font);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: 1000px;
+  /* Google usually keeps content aimed at center, roughly 800-1000px readable width */
+  margin: 0 auto;
+  padding: 0 var(--spacing-m);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #002b5c;
+  /* Dark Blue from user image */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-m) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: var(--md-sys-typescale-display-large-font);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  /* White text */
+}
+
+.nav-links a {
+  margin-left: var(--spacing-l);
+  color: rgba(255, 255, 255, 0.9);
+  /* Off-white text */
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* Header / Profile Section */
+.profile-section {
+  background-color: var(--md-sys-color-surface);
+  padding: var(--spacing-xxl) 0;
+  border-bottom: 1px solid var(--md-sys-color-outline);
+  margin-bottom: var(--spacing-xl);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.profile-info h1 {
+  font-family: var(--md-sys-typescale-display-large-font);
+  font-size: 3.5rem;
+  /* Larger hero size */
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.profile-info h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--md-sys-color-primary);
+  /* Use primary color for subtitle */
+  margin-bottom: var(--spacing-l);
+}
+
+.profile-bio {
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--spacing-l);
+  max-width: 650px;
+  font-size: 1.05rem;
+  /* Slightly larger for readability */
+  line-height: 1.7;
+}
+
+/* Interest Chips */
+.interest-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-s);
+}
+
+.interest-chip {
+  background-color: #e8f0fe;
+  /* Light Blue background */
+  color: var(--md-sys-color-primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  /* Keeps sizing consistent if border added later */
+}
+
+/* Hover effect for fun (optional) */
+.interest-chip:hover {
+  background-color: #d2e3fc;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-l);
+  /* Wider spacing */
+  margin-top: var(--spacing-xl);
+}
+
+.social-links a {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1.5rem;
+}
+
+.social-links a:hover {
+  color: var(--md-sys-color-primary);
+}
+
+/* Common Section Styles */
+section {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.section-title {
+  font-family: var(--md-sys-typescale-display-large-font);
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-l);
+  color: var(--md-sys-color-on-surface);
+  position: relative;
+  display: inline-block;
+}
+
+/* Cards (Publications, Projects) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Responsive grid */
+  gap: var(--spacing-l);
+}
+
+/* List layout for publications (more academic standard) */
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
+.publication-card {
+  background: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 12px;
+  padding: var(--spacing-l);
+  display: flex;
+  gap: var(--spacing-l);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.publication-card:hover {
+  box-shadow: var(--md-sys-elevation-1);
+  border-color: transparent;
+}
+
+.pub-thumb {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #eee;
+  flex-shrink: 0;
+}
+
+.pub-content {
+  flex: 1;
+}
+
+.pub-title {
+  font-family: var(--md-sys-typescale-display-large-font);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-s);
+  color: var(--md-sys-color-primary);
+  /* Links look like links */
+}
+
+.pub-authors {
+  font-size: 1rem;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--spacing-xs);
+}
+
+.pub-venue {
+  font-style: italic;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+}
+
+.pub-links {
+  display: flex;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-s);
+}
+
+/* Material Chips / Buttons for Links */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 16px;
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: all 0.2s;
+}
+
+.chip:hover {
+  background-color: rgba(26, 115, 232, 0.08);
+  /* Blue tint on hover */
+  color: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+.chip i {
+  margin-right: 6px;
+}
+
+/* Resume/Contact styling */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-l);
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-m);
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .publication-card {
+    flex-direction: column;
+  }
+
+  .pub-thumb {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+    /* In a real implementation we'd add a hamburger menu, for now simplified */
+  }
+}
+
+/* News Section */
+.news-box {
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: 12px;
+  padding: var(--spacing-l);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: var(--spacing-m);
+  border-bottom: 1px solid var(--md-sys-color-outline);
+  padding-bottom: var(--spacing-s);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.news-date {
+  font-weight: 600;
+  min-width: 100px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 0.9rem;
+}
+
+.news-content {
+  color: var(--md-sys-color-on-surface);
+  font-size: 0.95rem;
+}
+
+/* Landing Page / Hero Section Specifics */
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0;
+  /* Add generous top/bottom padding */
+  min-height: 80vh;
+  /* Takes up most of the screen */
+}
+
+.landing-container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-avatar {
+  width: 150px;
+  /* Fixed: Reduced size as requested */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--md-sys-color-outline);
+  margin-bottom: var(--spacing-l);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.landing-name {
+  font-family: var(--md-sys-typescale-display-large-font);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--spacing-s);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.landing-role {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--md-sys-color-primary);
+  margin-bottom: var(--spacing-l);
+}
+
+.landing-bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--md-sys-color-on-surface);
+  margin-bottom: var(--spacing-l);
+  max-width: 700px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-m);
+  margin: var(--spacing-l) 0;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.btn-primary:hover {
+  background-color: #f1f3f4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+}
+
+/* Center interest chips for landing */
+.landing-interests {
+  justify-content: center;
+  margin-bottom: var(--spacing-l);
+}
+
+/* Social icons for landing */
+.landing-social {
+  margin-top: var(--spacing-xl);
+  justify-content: center;
+}

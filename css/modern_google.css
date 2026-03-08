@@ -67,9 +67,8 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  background-color: #002b5c;
-  /* Dark Blue from user image */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #fff0ae;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: var(--spacing-m) 0;
   position: sticky;
   top: 0;
@@ -87,21 +86,19 @@ a:hover {
   font-family: var(--md-sys-typescale-display-large-font);
   font-size: 1.25rem;
   font-weight: 500;
-  color: #ffffff;
-  /* White text */
+  color: var(--md-sys-color-on-surface);
 }
 
 .nav-links a {
   margin-left: var(--spacing-l);
-  color: rgba(255, 255, 255, 0.9);
-  /* Off-white text */
+  color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
   font-size: 0.95rem;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #ffffff;
+  color: var(--md-sys-color-on-surface);
   text-decoration: none;
   opacity: 1;
 }
